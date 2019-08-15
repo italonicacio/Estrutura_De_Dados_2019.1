@@ -1,4 +1,6 @@
+#include <stdio.h>
 #include "spellchecker.h"
+
 
 
 int main(void)
@@ -6,10 +8,18 @@ int main(void)
 	struct SpellChecker spellChecker;
 	char *fileName = "asciidict.txt";
 
-	loadDictionary(&spellChecker, fileName);
+	LoadDictionary(&spellChecker, fileName);
+	
+	
+	
+
+	
 
 
 	
+
+	
+
 
 
 	return 0;

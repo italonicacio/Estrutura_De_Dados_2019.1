@@ -1,10 +1,13 @@
-spellchecker: sllist.o hashtable.o main.o spellchecker.o
-	gcc sllist.o main.o hashtable.o -o spellchecker
+test: sllist.o hashtable.o main.o spellchecker.o
+	gcc sllist.o main.o hashtable.o spellchecker.o -o test
+
+#spellchecker: sllist.o hashtable.o main.o spellchecker.o
+#	gcc sllist.o main.o hashtable.o spellchecker.o -o spellchecker 
 
 sllist.o: sllist.c
 	gcc  -g3 -c -Wall -Werror -std=c99 -O0 sllist.c
 
-test.o: main.c
+main.o: main.c
 	gcc  -g3 -c -Wall -Werror -std=c99 -O0 main.c
 
 hashtable.o: hashtable.c
@@ -16,4 +19,4 @@ spellchecker.o: spellchecker.c
 .PHONY: clean
 
 clean: 
-	rm *.o spellchecker
+	rm *.o spellchecker test

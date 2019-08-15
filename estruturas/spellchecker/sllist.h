@@ -1,9 +1,9 @@
-#ifndef HASHTABLE_SLLIST_H
-#define HASHTABLE_SLLIST_H
+#ifndef SPELLCHECKER_SLLIST_H
+#define SPELLCHECKER_SLLIST_H
 
 struct Node
 {
-	const char *value;
+	char *value;
 	struct Node *nextNode;
 };
 
@@ -17,9 +17,9 @@ struct Sllist{
 
 void InitSllist(struct Sllist * sll);
 
-void prepend(struct Sllist *const sll, const char *value);
+void prepend(struct Sllist * sll,  char *value);
 
-void DeleteSllist(struct Sllist *const sll);
+void DeleteSllist(struct Sllist *sll);
 
 
-#endif //HASHTABLE_SLLIST_H
+#endif //SPELLCHECKER_SLLIST_H

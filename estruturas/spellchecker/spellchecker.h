@@ -1,3 +1,6 @@
+#ifndef SPELLCHECKER_SPELLCHECKER_H
+#define SPELLCHECKER_SPELLCHECKER_H
+
 #include "hashtable.h"
 
 struct SpellChecker
@@ -8,4 +11,6 @@ struct SpellChecker
 
 void InitSpellCheker(struct SpellChecker *spellChecker, char *fileName);
 
-void loadDictionary(struct SpellChecker *const SpellChecker, char* fileName);
+void LoadDictionary(struct SpellChecker *spellChecker, char* fileName);
+
+#endif //SPELLCHECKER_SPELLCHECKER_H

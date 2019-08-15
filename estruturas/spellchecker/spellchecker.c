@@ -7,22 +7,21 @@ void InitSpellCheker(struct SpellChecker *spellChecker, char *fileName)
     HashTable *auxhashTable = NULL;
     auxhashTable = ( HashTable*) malloc(sizeof( HashTable ));
     spellChecker->fileName = fileName;
+
+    InitHashTable(*auxhashTable);
     spellChecker->hashTable = auxhashTable;
-
-    InitHashTable(spellChecker->hashTable);
-
    
 
 }
 
-void loadDictionary(struct SpellChecker *const SpellChecker, char* fileName)
+void LoadDictionary(struct SpellChecker *spellChecker, char* fileName)
 {
-    if(SpellChecker != NULL)
+    if(spellChecker != NULL)
     {
-        LoadTable(SpellChecker->hashTable, fileName);    
+        LoadTable(*spellChecker->hashTable, fileName);    
     }else{
 
-        InitSpellCheker(SpellChecker, fileName);
-        LoadTable(SpellChecker->hashTable, fileName);
+        InitSpellCheker(spellChecker, fileName);
+        LoadTable(*spellChecker->hashTable, fileName);
     }
 }

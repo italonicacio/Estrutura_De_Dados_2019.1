@@ -1,20 +1,20 @@
-#ifndef HASHTABLE_HASHTABLE_H
-#define HASHTABLE_HASHTABLE_H
+#ifndef SPELLCHECKER_HASHTABLE_H
+#define SPELLCHECKER_HASHTABLE_H
 
 #include "sllist.h"
 
 #define MAX_SIZE_HASH_TABLE 13
 
-typedef struct Sllist HashTable[MAX_SIZE_HASH_TABLE];
+typedef struct Sllist *HashTable[MAX_SIZE_HASH_TABLE];
 
 void InitHashTable(HashTable hashTable);
 
-unsigned int Hash(const char *const stringHashing);
+unsigned int Hash( char * stringHashing);
 
-void LoadChaining(struct Sllist *const sll, const  char *stringToNode);
+void LoadChaining(struct Sllist * sll,   char *stringToNode);
 
 void LoadTable(HashTable hashTable, char *fileName);
 
 
 
-#endif //HASHTABLE_HASHTABLE_H
+#endif //SPELLCHECKER_HASHTABLE_H

@@ -1,32 +1,32 @@
 #include <stdlib.h>
 #include "sllist.h"
 
-void InitSllist(struct Sllist *const sll)
+void InitSllist(struct Sllist *sll)
 {
 	sll->headNode = NULL;
 	sll->size = 0;
 
 }
 
-void prepend(struct Sllist *const sll, const char *value)
+void prepend(struct Sllist * sll,  char *value)
 {
-	struct Node *auxNode = NULL;
-	auxNode = (struct Node*) malloc(sizeof( struct Node));
-	auxNode->nextNode = NULL;
-	auxNode->value = value;
+	struct Node *newNode = NULL;
+	newNode = (struct Node*) malloc(sizeof( struct Node));
+	newNode->nextNode = NULL;
+	newNode->value = value;
 
-	if( !(sll->headNode) )
+	if( sll->headNode == NULL )
 	{
-		sll->headNode = auxNode;
+		sll->headNode = newNode;
 
 	}else{
-		auxNode->nextNode = sll->headNode;
-		sll->headNode = auxNode;
+		newNode->nextNode = sll->headNode;
+		sll->headNode = newNode;
 	}
-	
+	sll->size++;
 }
 
-void DeleteSllist(struct Sllist *const sll)
+void DeleteSllist(struct Sllist * sll)
 {
 	struct Node *auxNode = NULL;
 	auxNode = sll->headNode;

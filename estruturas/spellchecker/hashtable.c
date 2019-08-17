@@ -13,10 +13,9 @@ void InitHashTable(HashTable hashTable)
 	for(i = 0; i < MAX_SIZE_HASH_TABLE; i++ )
 	{
 
-		struct Sllist *newSllist = ( struct Sllist* ) malloc(sizeof( struct Sllist ));
-		newSllist->headNode = NULL;
-		newSllist->size = 0;
-		hashTable[i] = newSllist;
+		hashTable[i] = ( struct Sllist* ) malloc(sizeof( struct Sllist ));
+		InitSllist(hashTable[i]);
+		
 	}
 
 }

@@ -3,7 +3,7 @@
 
 #include "sllist.h"
 
-#define MAX_SIZE_HASH_TABLE 13
+#define MAX_SIZE_HASH_TABLE 661
 
 typedef struct Sllist *HashTable[MAX_SIZE_HASH_TABLE];
 

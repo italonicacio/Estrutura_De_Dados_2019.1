@@ -9,8 +9,11 @@ struct SpellChecker
     HashTable *hashTable;
 };
 
-void InitSpellCheker(struct SpellChecker *spellChecker, char *fileName);
+void InitSpellCheker( struct SpellChecker *spellChecker,  char *fileName );
 
-void LoadDictionary(struct SpellChecker *spellChecker, char* fileName);
+void LoadDictionary( struct SpellChecker *spellChecker, char* fileName );
+
+//void CompareTextToDictionary( struct spellchecker *SpellChecker, char* fileTextCompar );
+
 
 #endif //SPELLCHECKER_SPELLCHECKER_H

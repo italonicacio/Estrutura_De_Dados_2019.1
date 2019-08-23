@@ -10,7 +10,7 @@ struct Node
 
 struct Sllist{
 	struct Node *headNode;
-	int size;
+	unsigned int size;
 };
 
 

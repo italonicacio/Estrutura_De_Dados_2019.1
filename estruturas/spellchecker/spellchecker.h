@@ -15,5 +15,6 @@ void LoadDictionary( struct SpellChecker *spellChecker, char* fileName );
 
 //void CompareTextToDictionary( struct spellchecker *SpellChecker, char* fileTextCompar );
 
+void PrintResults();//falta parametros
 
 #endif //SPELLCHECKER_SPELLCHECKER_H

@@ -1,8 +1,5 @@
-test: sllist.o hashtable.o main.o spellchecker.o
-	gcc sllist.o main.o hashtable.o spellchecker.o -o test
-
-#spellchecker: sllist.o hashtable.o main.o spellchecker.o
-#	gcc sllist.o main.o hashtable.o spellchecker.o -o spellchecker 
+spellchecker: sllist.o hashtable.o main.o spellchecker.o
+	gcc sllist.o main.o hashtable.o spellchecker.o -o spellchecker 
 
 sllist.o: sllist.c
 	gcc  -g3 -c -Wall -Werror -std=c99 -O0 sllist.c

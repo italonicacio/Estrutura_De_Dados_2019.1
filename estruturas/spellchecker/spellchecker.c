@@ -23,6 +23,7 @@ void LoadDictionary(struct SpellChecker *spellChecker, char *fileName)
         
     }
 }
+
 /* 
 void CompareTextToDictionary( struct spellchecker *SpellChecker, char* fileTextCompar)
 {
